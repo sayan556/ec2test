@@ -17,7 +17,7 @@ agent any
      stage('deployment') {
        steps {
           script {
-           withCredentials([usernamePassword(credentialsId: 'sshcred', passwordVariable: 'password', usernameVariable: 'username')]) {
+           withCredentials([usernamePassword(credentialsId: 'sshcredential', passwordVariable: 'password', usernameVariable: 'username')]) {
     // some block
 
                remote.user = username
